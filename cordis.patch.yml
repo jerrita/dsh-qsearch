@@ -1,0 +1,6 @@
+# dsh-qsearch: insert only. Search takeover is a fiber effect in apply(),
+# so uninstalling this bundle leaves the official web.searchProvider pin
+# (deepseek-official) and no leftover composition override.
+- insert:
+    - id: qsearch
+      name: dsh-qsearch

@@ -1,0 +1,51 @@
+export const NS = 'qsearch'
+
+export const zh = {
+  nav: 'QSearch',
+  title: 'QSearch',
+  desc: '用已配置的 Gemini / OpenAI / Grok 走原生网页搜索，对话用的 OpenAI 兼容 baseURL 会改写成各家原生接口。',
+  backend: '搜索协议',
+  backendHint: '协议决定请求形态，与 Models 页的 LLM api 无关。Gemini 即使配成 OpenAI 兼容，搜索也会打 v1beta generateContent。',
+  backendAuto: '自动（按搜索模型名推断协议）',
+  backendGemini: 'Gemini 原生（google_search / v1beta）',
+  backendOpenai: 'OpenAI 原生（Responses web_search）',
+  backendGrok: 'Grok 原生（live search）',
+  route: '已配置路由',
+  routeHint: '来自 Models 页已启用的 provider。凭据与对话 baseURL 都读这条路由。',
+  model: '搜索模型',
+  modelHint: '必须指定。auto 时按模型 id 判断 Gemini / OpenAI / Grok。',
+  preview: '搜索端点预览',
+  previewHint: '对话 baseURL 改写后的原生搜索 URL。',
+  keyYes: '该路由已配置密钥',
+  keyNo: '该路由尚未配置密钥（到 Models 页写入）',
+  noKey: '无密钥',
+  catalogFail: '无法读取已配置模型目录',
+  revert: '恢复默认',
+  loading: '加载中…',
+}
+
+export const en = {
+  nav: 'QSearch',
+  title: 'QSearch',
+  desc: 'Native Gemini / OpenAI / Grok web search over routes already configured on the Models page. OpenAI-compatible conversation baseURLs are rewritten to each vendor’s native search prefix.',
+  backend: 'Search protocol',
+  backendHint: 'The protocol is independent of the LLM chat API. A Gemini route served as OpenAI-compatible still searches via v1beta generateContent.',
+  backendAuto: 'Auto (infer protocol from the search model id)',
+  backendGemini: 'Gemini native (google_search / v1beta)',
+  backendOpenai: 'OpenAI native (Responses web_search)',
+  backendGrok: 'Grok native (live search)',
+  route: 'Configured route',
+  routeHint: 'A live provider from the Models page. Credentials and the conversation baseURL come from this route.',
+  model: 'Search model',
+  modelHint: 'Required. In auto, the protocol is inferred from this model id.',
+  preview: 'Search endpoint preview',
+  previewHint: 'Native search URL after rewriting the conversation baseURL.',
+  keyYes: 'This route has a stored key',
+  keyNo: 'This route has no stored key (set it on the Models page)',
+  noKey: 'no key',
+  catalogFail: 'Could not load the configured-model catalog',
+  revert: 'Reset',
+  loading: 'Loading…',
+}
+
+export type Copy = typeof zh
